@@ -163,7 +163,6 @@ local push_github = {
     type: "kubernetes",
     name: "mirror-to-github",
     node_selector: {
-        "kubernetes.io/arch": "amd64",
         "federationhq.de/location": "Blumendorf",
         "federationhq.de/compute": true
     },
