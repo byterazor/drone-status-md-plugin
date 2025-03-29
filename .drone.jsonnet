@@ -164,7 +164,6 @@ local push_github = {
     name: "mirror-to-github",
     node_selector: {
         "federationhq.de/location": "Blumendorf",
-        "federationhq.de/compute": true
     },
     steps: [
         {
