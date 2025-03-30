@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk add --no-cache tini bash ca-certificates
+RUN apk update && apk add --no-cache tini bash ca-certificates envsubst
 
 ADD templates /templates
 ADD plugin.sh /
