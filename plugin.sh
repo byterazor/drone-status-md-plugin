@@ -14,6 +14,11 @@ fi
 #
 # no parameters below
 #
+
+if [ -n "${PLUGIN_SHOW_DATE}" ]; then
+    export DATE="Last Build: $(date)"
+fi
+
 if [ "${DRONE_BUILD_STATUS}" == "success" ]; then
     export STATUS_COLOR="green"
 elif [ "${DRONE_BUILD_STATUS}" == "" ]; then
