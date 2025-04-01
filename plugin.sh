@@ -29,15 +29,11 @@ else
 fi
 
 
-if [ "${DRONE_BUILD_EVENT}"  == "push" ]; then
-    echo "Processing push event ... "
-    cat /templates/simple_push.tmpl | envsubst > ${PLUGIN_FILE} 
-elif [ "${DRONE_BUILD_EVENT}"  == "pull_request" ]; then
-    echo "Processing pull request ... "
-else 
-    echo "Proessing tag"
-fi
+echo "Processing ${DRONE_BUILD_EVENT} event ... "
 
+if [ "${DRONE_BUILD_EVENT}"  == "push" -o "${DRONE_BUILD_EVENT}"  == "cron" -o  "${DRONE_BUILD_EVENT}"  == "custom" ]; then
+     cat /templates/simple_push.tmpl | envsubst > ${PLUGIN_FILE} 
+fi
 
 
 
