@@ -39,7 +39,7 @@ if [ "${DRONE_BUILD_EVENT}"  == "push" -o "${DRONE_BUILD_EVENT}"  == "cron" -o  
      fi
     
     if [ -n "${PLUGIN_SHOW_CICD}" ]; then
-        echo -n "![Static Badge](https://img.shields.io/badge/CI--CD-${PLUGIN_SHOW_CICD}-green " >> ${PLUGIN_FILE} 
+        echo -n "![Static Badge](https://img.shields.io/badge/CI--CD-${PLUGIN_SHOW_CICD}-green) " >> ${PLUGIN_FILE} 
      fi
 
      if [ -z "${PLUGIN_USE_STAGES}" ]; then
